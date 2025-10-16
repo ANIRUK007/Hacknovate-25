@@ -1,43 +1,63 @@
 import { useEffect, useState } from 'react';
-import { Building2, Lightbulb, Zap, Rocket, Layers, Box } from 'lucide-react';
+import sponsor1 from '../pictures/devnovate.jpg';
+import sponsor2 from '../pictures/HWI.jpg';
+import sponsor3 from '../pictures/knowationlearning.png';
 
 export default function SponsorCarousel() {
-  const [position, setPosition] = useState(0);
-
-  const sponsors = [
-    { name: 'TechCorp', icon: Building2, color: 'text-[#3b82f6]' },
-    { name: 'InnovateLabs', icon: Lightbulb, color: 'text-[#fbbf24]' },
-    { name: 'PowerSystems', icon: Zap, color: 'text-[#ef4444]' },
-    { name: 'RocketStart', icon: Rocket, color: 'text-[#8b5cf6]' },
-    { name: 'LayerStack', icon: Layers, color: 'text-[#22c55e]' },
-    { name: 'BoxTech', icon: Box, color: 'text-[#06b6d4]' },
-    { name: 'TechCorp', icon: Building2, color: 'text-[#3b82f6]' },
-    { name: 'InnovateLabs', icon: Lightbulb, color: 'text-[#fbbf24]' },
+  const baseSponsors = [
+    { name: 'TechCorp', image: sponsor1 },
+    { name: 'InnovateLabs', image: sponsor2 },
+    { name: 'PowerSystems', image: sponsor3 },
   ];
 
+  // duplicate list to make seamless looping
+  const sponsors = [...baseSponsors, ...baseSponsors];
+
+  const [position, setPosition] = useState(0);
+
   useEffect(() => {
+    const itemWidth = 224; // w-56 = 14rem = 224px
+    const gap = 48; // gap-12 = 3rem = 48px
+    const totalItemWidth = itemWidth + gap;
+
+    // Total width of half (one set of sponsors)
+    const totalWidth = baseSponsors.length * totalItemWidth;
+
+    // Start centered
+    const initialPosition = window.innerWidth / 2 - totalItemWidth / 2;
+    setPosition(initialPosition);
+
     const interval = setInterval(() => {
-      setPosition((prev) => (prev - 1) % (sponsors.length * 200));
-    }, 30);
+      setPosition((prev) => {
+        // move left continuously
+        const newPos = prev - 1;
+        // when scrolled one full set, reset seamlessly
+        return newPos <= -totalWidth ? initialPosition : newPos;
+      });
+    }, 20); // adjust speed if needed
 
     return () => clearInterval(interval);
-  }, [sponsors.length]);
+  }, []);
 
   return (
-    <div className="relative overflow-hidden pixel-border p-8 bg-[#1e293b]">
+    <div className="relative overflow-hidden bg-[#1e293b] py-8">
       <div
-        className="flex gap-8 transition-transform"
+        className="flex gap-12 items-center transition-transform"
         style={{
           transform: `translateX(${position}px)`,
+          willChange: 'transform',
         }}
       >
         {sponsors.map((sponsor, index) => (
           <div
             key={index}
-            className="pixel-border p-8 bg-[#334155] flex-shrink-0 w-48 hover:bg-[#475569] transition-all"
+            className="flex-shrink-0 flex flex-col items-center w-56"
           >
-            <sponsor.icon className={`w-16 h-16 mx-auto mb-4 ${sponsor.color}`} />
-            <p className="text-xs text-center text-white">{sponsor.name}</p>
+            <img
+              src={sponsor.image}
+              alt={sponsor.name}
+              className="w-48 h-48 object-contain"
+            />
           </div>
         ))}
       </div>
