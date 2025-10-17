@@ -199,40 +199,57 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4 bg-[#334155]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-center mb-12 text-[#3b82f6] pixel-border inline-block px-6 py-4 bg-[#1e293b] mx-auto block w-fit">
-            CONTACT
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="pixel-border p-6 bg-[#1e293b]">
-              <p className="text-xs mb-4 text-[#3b82f6]">Email</p>
-              <p className="text-xs text-[#cbd5e1] break-all">hacknovate@methodist.edu.in</p>
-            </div>
-            <div className="pixel-border p-6 bg-[#1e293b]">
-              <p className="text-xs mb-4 text-[#3b82f6]">WhatsApp</p>
-              <a
-                href="https://chat.whatsapp.com/Fq6omGCzrxPJegpf4mTfio?mode=wwt"
-                className="text-xs text-[#22c55e] hover:text-[#16a34a] break-all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Join Group
-              </a>
-            </div>
-          </div>
-          <div className="mt-8 pixel-border p-6 bg-[#1e293b]">
-            <p className="text-xs mb-4 text-[#3b82f6]">Organizers</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-[#cbd5e1]">
-              <p>Hemanth: 9398056142</p>
-              <p>Divyansi: 9704833523</p>
-              <p>Razzak: 8309595385</p>
-              <p>Muzakir: 9949692187</p>
-            </div>
-          </div>
-        </div>
-      </section>
+     {/* Contact Section */}
+<section className="py-20 px-4 bg-[#334155]">
+  <div className="max-w-4xl mx-auto">
+    {/* Section Heading */}
+    <h2 className="text-3xl md:text-4xl text-center mb-12 text-[#3b82f6] pixel-border inline-block px-6 py-4 bg-[#1e293b] mx-auto block w-fit">
+      CONTACT
+    </h2>
+
+    {/* Contact Methods */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="pixel-border p-6 bg-[#1e293b]">
+        <p className="text-xs mb-4 text-[#3b82f6]">Email</p>
+        <p className="text-xs text-[#cbd5e1] break-all">
+          hacknovate@methodist.edu.in
+        </p>
+      </div>
+      <div className="pixel-border p-6 bg-[#1e293b]">
+        <p className="text-xs mb-4 text-[#3b82f6]">WhatsApp</p>
+        <a
+          href="https://chat.whatsapp.com/Fq6omGCzrxPJegpf4mTfio?mode=wwt"
+          className="text-xs text-[#22c55e] hover:text-[#16a34a] break-all"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join Group
+        </a>
+      </div>
+    </div>
+
+    {/* Faculty Coordinators */}
+    <div className="mt-8 pixel-border p-6 bg-[#1e293b]">
+      <p className="text-xs mb-4 text-[#3b82f6]">Faculty Coordinators</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-[#cbd5e1]">
+        <p>Assitant Professor, Vasavi Sravanthi Balusa : +91 8500088390</p>
+        <p>Assitant Professor, Meenal H : +91 9014234596</p>
+      </div>
+    </div>
+
+    {/* Student Coordinators */}
+    <div className="mt-8 pixel-border p-6 bg-[#1e293b]">
+      <p className="text-xs mb-4 text-[#3b82f6]">Student Coordinators</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-[#cbd5e1]">
+        <p>Hemanth: 9398056142</p>
+        <p>Divyansi: 9704833523</p>
+        <p>Razzak: 8309595385</p>
+        <p>Muzakir: 9949692187</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="py-8 px-4 bg-[#1e293b] border-t-4 border-[#3b82f6]">
