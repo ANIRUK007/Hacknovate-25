@@ -71,7 +71,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
 
         {/* CTA Button */}
         <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSfJz0oH1TDM1e1g3xObQwo-gkVEc7ftyMdJyM8cudX-M4Bwug/viewform?usp=sharing&ouid=116282575348975038758"
+  href="https://forms.gle/okyBZiYGTjetrrMc7"
   target="_blank"
   rel="noopener noreferrer"
   className="relative z-10 pixel-button bg-[#dc2626] text-white px-8 py-4 text-sm md:text-base hover:bg-[#b91c1c] mb-16"
@@ -188,7 +188,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
           </div>
           <div className="text-center">
             <a
-  href="https://docs.google.com/forms/d/e/1FAIpQLSfJz0oH1TDM1e1g3xObQwo-gkVEc7ftyMdJyM8cudX-M4Bwug/viewform?usp=sharing&ouid=116282575348975038758"
+  href="https://forms.gle/okyBZiYGTjetrrMc7"
   target="_blank"
   rel="noopener noreferrer"
   className="relative z-10 pixel-button bg-[#dc2626] text-white px-8 py-4 text-sm md:text-base hover:bg-[#b91c1c] mb-16"
