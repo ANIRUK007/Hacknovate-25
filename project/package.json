@@ -1,17 +1,16 @@
 {
-  "name": "vite-react-typescript-starter",
-  "homepage": "https://github.com/MethodistCollege/Hacknovate-25.git",
+  "name": "hacknovate-25",
+  "homepage": "https://MethodistCollege.github.io/Hacknovate-25/",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "preview": "vite preview",
-      "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
-  "start": "react-scripts start",
-  "build": "react-scripts build"
-  },
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
     "lucide-react": "^0.344.0",
