@@ -229,13 +229,13 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
     </div>
 
     {/* Faculty Coordinators */}
-    <div className="mt-8 pixel-border p-6 bg-[#1e293b]">
-      <p className="text-xs mb-4 text-[#3b82f6]">Faculty Coordinators</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-[#cbd5e1]">
-        <p>Assitant Professor, Vasavi Sravanthi Balusa : +91 8500088390</p>
-        <p>Assitant Professor, Meenal H : +91 9014234596</p>
-      </div>
-    </div>
+<div className="mt-8 pixel-border p-6 bg-[#1e293b]">
+  <p className="text-xs mb-4 text-[#3b82f6]">Faculty Coordinators</p>
+  <div className="space-y-2 text-xs text-[#cbd5e1]">
+    <p>Assistant Professor, Vasavi Sravanthi Balusa : +91 8500088390</p>
+    <p>Assistant Professor, Meenal H : +91 9014234596</p>
+  </div>
+</div>
 
     {/* Student Coordinators */}
     <div className="mt-8 pixel-border p-6 bg-[#1e293b]">
