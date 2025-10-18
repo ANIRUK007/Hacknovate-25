@@ -2,12 +2,16 @@ import { useEffect, useState } from 'react';
 import sponsor1 from '../pictures/devnovate.jpg';
 import sponsor2 from '../pictures/HWI.jpg';
 import sponsor3 from '../pictures/knowationlearning.png';
+import sponsor4 from '../pictures/edventurepark.png';
+import sponsor5 from '../pictures/codeforindia.png'
 
 export default function SponsorCarousel() {
   const baseSponsors = [
     { name: 'TechCorp', image: sponsor1 },
     { name: 'InnovateLabs', image: sponsor2 },
     { name: 'PowerSystems', image: sponsor3 },
+    { name: 'PowerSystems', image: sponsor4 },
+    { name: 'PowerSystems', image: sponsor5 },
   ];
 
   // duplicate list to make seamless looping
